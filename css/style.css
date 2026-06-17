@@ -151,16 +151,16 @@ button {
 
 .hero {
   display: grid;
-  gap: 28px;
+  gap: 22px;
   min-height: calc(100svh - 70px);
-  padding: 28px 0 70px;
-  align-items: center;
+  padding: 22px 0 58px;
+  align-items: start;
 }
 
 .hero-media {
   position: relative;
-  height: 460px;
-  min-height: 460px;
+  height: clamp(340px, 58svh, 430px);
+  min-height: 0;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 34px;
@@ -170,13 +170,13 @@ button {
 .hero-media img {
   position: absolute;
   inset: 0;
-  object-position: 62% center;
+  object-position: 58% center;
 }
 
 .hero-media::after {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, transparent 54%, rgba(49, 39, 43, 0.2));
+  background: linear-gradient(180deg, rgba(49, 39, 43, 0) 42%, rgba(49, 39, 43, 0.28));
   content: "";
 }
 
@@ -211,12 +211,12 @@ button {
 
 .hero-badge {
   position: absolute;
-  right: 18px;
-  bottom: 18px;
+  right: 14px;
+  bottom: 14px;
   z-index: 2;
-  width: min(245px, calc(100% - 36px));
-  padding: 18px;
-  background: rgba(255, 250, 246, 0.9);
+  width: min(255px, calc(100% - 28px));
+  padding: 16px;
+  background: rgba(255, 250, 246, 0.92);
   border: 1px solid rgba(255, 255, 255, 0.72);
   border-radius: 22px;
   box-shadow: var(--soft-shadow);
@@ -265,9 +265,11 @@ h2 {
 }
 
 h1 {
-  max-width: 8ch;
-  margin-bottom: 18px;
-  font-size: clamp(4.6rem, 22vw, 9rem);
+  max-width: 9ch;
+  margin-bottom: 16px;
+  font-size: clamp(3.9rem, 18vw, 8.2rem);
+  font-weight: 500;
+  line-height: 0.98;
 }
 
 h2 {
@@ -916,6 +918,8 @@ p {
   .hero {
     grid-template-columns: 1.08fr 0.92fr;
     gap: 38px;
+    padding: 28px 0 70px;
+    align-items: center;
   }
 
   .hero-media {
