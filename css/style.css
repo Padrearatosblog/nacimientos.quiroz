@@ -166,6 +166,10 @@ button {
   box-shadow: var(--shadow);
 }
 
+.hero-media img {
+  object-position: 62% center;
+}
+
 .hero-media::after {
   position: absolute;
   inset: 0;
