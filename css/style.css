@@ -159,6 +159,7 @@ button {
 
 .hero-media {
   position: relative;
+  height: 460px;
   min-height: 460px;
   overflow: hidden;
   border: 1px solid var(--line);
@@ -167,6 +168,8 @@ button {
 }
 
 .hero-media img {
+  position: absolute;
+  inset: 0;
   object-position: 62% center;
 }
 
@@ -916,6 +919,7 @@ p {
   }
 
   .hero-media {
+    height: 660px;
     min-height: 660px;
   }
 
